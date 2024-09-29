@@ -1,6 +1,41 @@
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/**
+ * This program demonstrates the usage of LinkedList in Java.
+ *
+ * Why use LinkedList?
+ * - A `LinkedList` is a data structure that allows elements to be stored as nodes with pointers
+ *   to the next (and previous in case of a doubly linked list) element.
+ * - It implements both `List` and `Deque` interfaces, meaning it can be used as both a list (like `ArrayList`)
+ *   and a double-ended queue.
+ * - Provides efficient insertions and deletions at both ends (head and tail) and at any arbitrary
+ *   position in the list.
+
+ * When to use LinkedList?
+ * - When you need frequent insertions and deletions at both the beginning or end of the list.
+ * - When you need a flexible list structure with dynamic memory allocation and do not require
+ *   random access to elements.
+ * - Useful in scenarios like implementing stacks, queues, or when list modifications are frequent.
+
+ * Advantages of LinkedList:
+ * - Efficient insertion and deletion at both ends or in the middle with O(1) complexity when the node is known.
+ * - Doubly linked: Can be traversed in both forward and backward directions.
+ * - Implements both `List` and `Deque` interfaces, making it versatile for use as a stack, queue,
+ *   or double-ended queue.
+
+ * Disadvantages of LinkedList:
+ * - Slower access time compared to `ArrayList` for random access to elements since it requires traversing
+ *   nodes sequentially (O(n) complexity).
+ * - Uses more memory than `ArrayList` due to the additional storage needed for pointers (references to
+ *   the next and previous nodes).
+ * - Not synchronized, meaning it is not thread-safe without external synchronization.
+
+ * Consider using other data structures instead of LinkedList if:
+ * - You need fast random access to elements (use `ArrayList`).
+ * - You have a memory-constrained environment, as `LinkedList` consumes more memory.
+ * - You need a thread-safe list (consider using `CopyOnWriteArrayList` or `Collections.synchronizedList()`).
+ */
 public class LinkedListListPractice {
     public static void main(String[] args) {
         LinkedList<String> stringLinkedList = getStringLinkedList();
